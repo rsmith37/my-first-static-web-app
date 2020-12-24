@@ -1,0 +1,9 @@
+Copy
+{
+  "routes": [
+    {
+      "route": "/hello*",
+      "serve": "/api/hello"
+    }
+  ]
+}
