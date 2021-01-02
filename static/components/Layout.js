@@ -4,6 +4,8 @@ import Link from 'next/link'
 import Navbar from './Navbar'
 
 export default function Layout({title, children}) {
+  const year = new Date().getFullYear();
+
   return (
     <div>
       <Head>
@@ -11,19 +13,19 @@ export default function Layout({title, children}) {
           <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="flex flex-col h-screen justify-between">
+      <div className="flex flex-col min-h-screen justify-between">
         <header className="sticky top-0">
           <Navbar/>
         </header>
 
-        {/* <div className="flex-1 overflow-y-auto "> */}
-          <main className="p-5 h-screen">
-            
+        {/* <div className="flex flex-col items-between"> */}
+          <main className="my-auto">
             {children}
           </main>
 
-          <footer className="py-8 bg-gray-900 text-center text-white">
-            <p>Designed and Developed by Richard P Smith &copy; 2020</p>
+          <footer className="pt-3 pb-6 text-center">
+            <hr className="container m-auto pb-6"/>
+            <p className="text-xs">Designed and Developed by Richard P Smith &copy; {year}</p>
           </footer>
         {/* </div> */}
       </div>

@@ -1,7 +1,7 @@
 import '../styles/globals.css'
 
 const MyApp = ({ Component, pageProps }) => (
-    <div>
+    <div className="bg-gray-900 text-white">
       <Component {...pageProps} />
     </div>
 );
