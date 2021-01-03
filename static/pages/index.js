@@ -1,10 +1,13 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import { useEffect } from 'react'
 import Layout from '../components/Layout'
 import About from './about'
 
 
-export default function Home() {
+export default function Home({ test }) {
+  console.log(test)
+
   return (
     <Layout title="Richard Smith | Home">
       <div className="flex flex-col ">
@@ -18,4 +21,15 @@ export default function Home() {
       </div>
     </Layout>
   )
+}
+
+export const getStaticProps = async () => {
+  const res = await fetch('http://localhost:3000/api/date')
+  const test = await res.json()
+
+  return {
+    props: {
+      test,
+    }
+  }
 }

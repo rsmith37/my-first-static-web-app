@@ -35,7 +35,7 @@ export default function Navbar({ fixed }) {
             </button>
           </div>
           <div
-            className={"lg:flex flex-grow items-center" + (navbarOpen ? " flex" : " hidden")}
+            className={"lg:flex flex-grow items-center bg-red-200" + (navbarOpen ? " flex z-10" : " hidden")}
             id="example-navbar-danger"
           >
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
