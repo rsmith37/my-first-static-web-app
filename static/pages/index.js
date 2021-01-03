@@ -24,12 +24,12 @@ export default function Home({ test }) {
 }
 
 export const getStaticProps = async () => {
-  const res = await fetch('http://localhost:3000/api/date')
-  const test = await res.json()
+  // const res = await fetch('http://localhost:3000/api/date')
+  // const test = await res.json()
 
   return {
     props: {
-      test,
+      test: "Hello this is a test",
     }
   }
 }
